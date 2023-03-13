@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personagens - Haikyuu</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    </head>
+    <body>
+        <!-- navegação -->
+        <header>
+            <div class="logo">
+               <a href="../Home/Home.html"><img src="img/logo_haikyuu-removebg-preview.png" alt="logo"></a>
+            </div>
+            <nav>
+              <ul class="nav-list">
+                    <li><a href="../Home/Home.html">Home</a></li>
+                    <li><a href="../Temporadas/Temporadas.html" rel="next" target="_self">Temporadas</a></li>
+                    <li><a href="../Mangá/Mangá.html" rel="next" target="_self">Mangá</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="../Personagens/index.html" class="active">Personagens</a></li>
+              </ul>
+            </nav>
+          </header>
+           
+          <!-- Personagens -->
+
+        <div id="app">
+            <div class="hero-bg" 
+                 :style="{ backgroundImage: `url(${activeInfo.img})` }" 
+                 :key="activeIndex">
+            </div>
+            
+            <div class="hero-title"  :key="activeIndex">
+                {{ activeInfo.name }}
+            </div>
+            
+            <div class="round">
+              <div class="item" 
+                   :class="{ active: activeIndex === key }"
+                   @click="activeIndex = key"
+                   v-for="(el, key) in list"
+                   :key="key"
+                   :style="{ transform: itemPosition[key] }">
+
+                <div class="inner">
+                  <img :src="el.thumbImg" alt="">
+                </div>
+
+              </div>
+            </div>
+            
+            <div class="hero-info" v-if="activeInfo" :key="activeIndex">
+              <div class="row">
+                <div class="title">
+                    name
+                </div>
+
+                <div class="content">
+                    {{ activeInfo.name }}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="title">
+                    role
+                </div>
+
+                <div class="content">
+                    {{ activeInfo.role }}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="title">
+                    number
+                </div>
+                
+                <div class="content">
+                    {{ activeInfo.number }}
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        <script src='https://unpkg.com/vue@3.2.22/dist/vue.global.js'></script>
+    </body>
+</html>

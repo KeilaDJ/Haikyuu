@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Toto:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif Toto', sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+.header ul{
+    list-style: none;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    height: 100%;
+    z-index: 100;
+    align-items: stretch;
+    gap: 2px;
+}
+
+.header ul li{
+    list-style: none;
+}
+
+.header ul li a{
+    text-decoration: none;
+    padding: 0px 20px;
+    color:#ffffff;
+    border-radius: 20px;
+}
+
+.header ul li a:hover,
+.header ul li a.active{
+    background: #f8ae4d;
+    color: #000000;
+    font-weight: bolder;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: url(img/imgg.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .content{
+    max-width: 550px;
+}
+
+.banner .content h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.banner .content h2 span{
+  font-weight: 800;
+  color: #fd6500;
+}
+
+.banner .content p{
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 15px 0 35px;
+}
+
+.play{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fd6500;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+
+.play img{
+    margin-right: 10px;
+    max-width: 50px;
+}
+/* 
+.slide{
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 250px / 2);
+    width: 250px;
+    height: 150px;
+    background: url(img/5img.jpg);
+    border-radius: 5px;
+    background-size: cover;
+    cursor: pointer;
+    animation: animate 25s linear infinite;
+} */
+
+@keyframes animate{
+    0%,100%{
+        background-position: top;
+    }
+    
+    45%,55%{
+        background-position: bottom;
+    }
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+
+.trailer .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+img{
+    width: 30%;
+    height: 20rem;
+    object-fit: cover;
+    /* -webkit-box-reflect: ; */
+}
+
+@media(max-width: 991px){
+    header{
+        padding: 20px 50px;
+    }
+
+    .banner{
+        padding: 100px 50px;
+    } 
+
+    .banner .content h2{
+        font-weight: 400;
+        font-size: 2em;
+        letter-spacing: 0.05em;
+    }
+
+    .banner .content p{
+        font-size: 1em;
+    }
+    
+    .trailer video{
+        max-width: 90%;
+        outline: none;
+    }
+}

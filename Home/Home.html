@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Haikyuu</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="../Temporadas/Temporadas.html" rel="next" target="_self">Temporadas</a></li>
+                    <li><a href="../Mangá/Mangá.html" rel="next" target="_self">Mangá</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="../Personagens/index.html">Personagens</a></li>
+                </ul> 
+            </nav>
+        </header>
+        <section>
+            <div class="banner">
+                <div class="content">
+                    <h2>Hai<span>Kyuu</span></h2>
+                    <p>Haikyu!! é um anime de esportes que gira em torno do amor de Shoyo Hinata pelo vôlei. Inspirado por um jogador de vôlei profissional de baixa estatura, Hinata cria um time de vôlei em seu último ano do ensino médio. Infelizmente, o time enfrenta o time do "Rei da Quadra" Tobio Kageyama em seu primeiro torneio e inevitavelmente perde. Após a derrota esmagadora, Hinata promete superar Kageyama Depois de entrar no ensino médio, Hinata se junta ao time de vôlei apenas para descobrir que Tobio também se juntou.</p>
+                    <a href="#" class="play" onclick="toggle();"><img src="img/play.png">watch Trailer</a>
+                </div>
+            </div>
+            <div class="trailer">
+                <video src="img/Haikyu!! - Official Trailer.mp4" controls="true"></video>
+                <img src="img/close.png" class="close" onclick="toggle();">
+            </div>
+        </section>
+        <div class="container">
+            <img src="img/Haikyuu.jpg" alt="">
+            <img src="img/5img.jpg" alt="">
+            <img src="img/3img.jpg" alt="">
+        </div>
+        
+        <script type="text/javascript">
+            function toggle() {
+                var trailer = document.querySelector('.trailer');
+                var video = document.querySelector('video');
+                trailer.classList.toggle('active')
+                video.currentTime = 0;
+                video.pause();
+            }
+        </script>
+    </body>
+</html>
