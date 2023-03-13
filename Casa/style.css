@@ -170,13 +170,6 @@ header{
     max-width: 32px;
 }
 
-img{
-    width: 30%;
-    height: 20rem;
-    object-fit: cover;
-    /* -webkit-box-reflect: ; */
-}
-
 @media(max-width: 991px){
     header{
         padding: 20px 50px;
