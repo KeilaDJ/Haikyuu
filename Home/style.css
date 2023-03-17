@@ -36,6 +36,7 @@ header{
 }
 
 .header ul li a{
+    font-size: 25px;
     text-decoration: none;
     padding: 0px 20px;
     color:#ffffff;
@@ -56,7 +57,7 @@ header{
 }
 
 .banner{
-    position: relative;
+   position: absolute;
     width: 100%;
     min-height: 100vh;
     padding: 0 100px;
@@ -86,7 +87,7 @@ header{
 }
 
 .banner .content p{
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 300;
     letter-spacing: 0.02em;
     line-height: 1.5em;
@@ -111,19 +112,6 @@ header{
     margin-right: 10px;
     max-width: 50px;
 }
-/* 
-.slide{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 250px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(img/5img.jpg);
-    border-radius: 5px;
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-} */
 
 @keyframes animate{
     0%,100%{
@@ -194,3 +182,4 @@ header{
         outline: none;
     }
 }
+

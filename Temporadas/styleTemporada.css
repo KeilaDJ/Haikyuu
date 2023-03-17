@@ -31,13 +31,14 @@ body::before{
 }
 
 .logo-haikyuu{
-    margin-left: 60px;
-    margin-top: 50px;
+    margin-left: 10px;
+    margin-top: 9px;
  }
  
  .logo-haikyuu img{
-     height: 7vh;
+     height: 5vh;
  }
+
 .header{
     padding: 20px 50px;
     position: relative;
@@ -70,6 +71,7 @@ header{
  }
  
  .header ul li a{
+    font-size: 25px;
      text-decoration: none;
      padding: 0px 20px;
      color:#fffdfd;
@@ -84,84 +86,3 @@ header{
  }
 
 /* Main */
-
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 40em;
-    margin-top: 1.4em;
-}
-
-main section{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 2.9em;
-}
-
-main section .btn-box{
-    display: flex;
-    position: relative;
-    margin-top: 40px;
-    gap: 5px;
-    
-}
-
-.text{
-    position: relative;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-    color: #ffffff;
-    margin-top: 140px;
-    padding: 15px;
-    cursor: pointer;
-}
-
-.text:hover{
-    color:  #fc7608;
-} 
-
-.Assistir{
-    display: flex;
-    align-items: center;
-    color: rgb(5, 5, 5);
-    background: #fd8803a1;
-    padding: 15px 45px;
-    margin-top: 300px;
-    border-radius: 5px 5px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all .3s;
-    position: absolute;
-    box-shadow: 10px 10px 10px	#030303bb;
-}
-
-.Assistir:hover{
-    background: #fdb226a9;
-}
-
-.btn-box .btn{
-    height: 40px;
-    width: 200px;
-    padding: 3px 15px;
-    background: #FFE4B5 ;
-    color: rgb(3, 3, 3);
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px	#030303;
-    transition: all .3s;
-    font-size: 25px;
-    text-decoration: none;
-    margin-top: -80px;
-}
-
-.btn-box .btn:hover{
-    background:#69696998;
-    color: #ffffff;
-}
-
-.btn-box .btn:focus{
-    background: #0e0d0da9;
-    color: #ffffff;
-}
